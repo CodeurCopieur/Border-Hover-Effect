@@ -1,0 +1,73 @@
+/* font */
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+
+
+
+body {
+    font-family: 'Monoton', cursive;
+    background-color:#01579b; 
+    padding: 50px 0;
+}
+
+.nav {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.nav * {
+    box-sizing: border-box;
+    transition: all .35s ease;
+}
+
+.nav-links-list {
+
+    list-style: outside none none;
+    margin: 1em 1em;
+    padding: 0;
+
+}
+
+.nav-link {
+    padding: .5em .8em;
+    color: rgba(255, 255, 255, .5);
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav a:before,
+.nav a:after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+}
+
+a:before {
+    right: 0;
+    top: 0;
+    border-right: 3px solid #ff1744;
+    border-top: 3px solid #ff1744;
+    transform: translate(-100%, 50%);
+}
+
+a:after {
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid #ff1744;
+    border-left: 3px solid #ff1744;
+    transform: translate(100%, -50%);
+}
+
+a:hover:before,
+a:hover:after {
+    transform: translate(0%, 0%);
+    opacity: 1;
+}
